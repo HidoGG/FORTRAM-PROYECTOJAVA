@@ -11,7 +11,7 @@ Para el login
 
 USUARIO: UTN
 
-PASSWORD: 123 y si quiere quye falle ingresar datos incoorecto tiene tres intentos solamente.
+PASSWORD: 123 y si quieres que falle ingresar datos incoorecto, tiene tres intentos solamente.
 UNA VES INGRESADO  APARECE EL MENU
  1) REGISTRAMOS LAS PERSONAS (Puede actualizar datos o darle de baja)
  2) Buscar PERSONAS(Apreta el boton buscr primero y luego por nombre de la persona y devuelve los datos)
