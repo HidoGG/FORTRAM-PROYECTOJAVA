@@ -16,7 +16,7 @@ public class Actualizar extends javax.swing.JFrame {
     int filas;
     Metodos metodos = new Metodos();
     DefaultTableModel mdlTable;
-    private Date date;
+   
 
     public Actualizar() {
         this.setContentPane(new ImgFondo());

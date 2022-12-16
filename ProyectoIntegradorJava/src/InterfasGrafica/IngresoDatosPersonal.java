@@ -30,7 +30,6 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
         this.cabecera.addElement("CUIT");
         this.cabecera.addElement("Categoria");
         this.cabecera.addElement("Sueldo");
-        this.cabecera.addElement("Sexo");
         mdlTable = new DefaultTableModel(cabecera, 0);
         jtb_registropersonal.setModel(mdlTable);
         this.setTitle("Registro Del Personal");
@@ -63,7 +62,6 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
         btn_actualizar = new javax.swing.JButton();
         btn_baja = new javax.swing.JButton();
         btn_salir = new javax.swing.JButton();
-        jcb_sexo = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -190,16 +188,6 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
             }
         });
 
-        jcb_sexo.setBackground(new java.awt.Color(153, 153, 153));
-        jcb_sexo.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
-        jcb_sexo.setForeground(new java.awt.Color(255, 255, 255));
-        jcb_sexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sexo", "Masculino", "Femenino" }));
-        jcb_sexo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jcb_sexoActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -233,9 +221,7 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jcb_categoria, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(31, 31, 31)
-                                .addComponent(jcb_sueldo, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jcb_sexo, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jcb_sueldo, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(197, 197, 197))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -267,8 +253,7 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
                     .addComponent(jcb_categoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jcb_sueldo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4)
-                    .addComponent(txt_cuit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jcb_sexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_cuit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -322,15 +307,12 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
         String categoria = jcb_categoria.getSelectedItem().toString();
         double sueldo = Double.parseDouble(jcb_sueldo.getSelectedItem().toString());
         
-        String Sexo = jcb_sexo.getSelectedItem().toString();
-
         personal.setNombre(nombre);
         personal.setApellido(apellido);
         personal.setDni(dni);
         personal.setCuit(cuit);
         personal.setCategoria(categoria);
         personal.setSueldo(sueldo);
-        personal.setSexo(Sexo);
         metodos.guardar(personal);
         metodos.guardarArchivo(personal);
         JOptionPane.showMessageDialog(null, "Registro cargado con exito");
@@ -366,10 +348,6 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
             
         }
     }//GEN-LAST:event_btn_salirActionPerformed
-
-    private void jcb_sexoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcb_sexoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jcb_sexoActionPerformed
     public void filtro() {
         filtro = txt_nombre.getText();
         trsfiltro.setRowFilter(RowFilter.regexFilter(txt_nombre.getText(), 0));
@@ -421,7 +399,6 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton jbt_regresar;
     private javax.swing.JComboBox<String> jcb_categoria;
-    private javax.swing.JComboBox<String> jcb_sexo;
     private javax.swing.JComboBox<String> jcb_sueldo;
     private javax.swing.JLabel jlb_nombre;
     private javax.swing.JTable jtb_registropersonal;
