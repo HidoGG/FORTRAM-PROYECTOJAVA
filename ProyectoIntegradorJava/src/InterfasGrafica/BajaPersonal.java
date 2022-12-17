@@ -1,7 +1,7 @@
 
 package InterfasGrafica;
 
-import MenuOpciones.MenuOpciones;
+
 import Metodos.Metodos;
 import img.ImgFondo;
 import java.io.*;
@@ -178,8 +178,8 @@ public class BajaPersonal extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_salirActionPerformed
 
     private void btn_regresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_regresarActionPerformed
-        MenuOpciones Menu = new MenuOpciones();
-        Menu.setVisible(true);
+        IngresoDatosPersonal Ingreso = new IngresoDatosPersonal();
+        Ingreso.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btn_regresarActionPerformed
 

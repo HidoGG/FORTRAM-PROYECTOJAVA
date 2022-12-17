@@ -24,7 +24,7 @@ public class Metodos {
             pw.print("|" + personal.getDni());
             pw.print("|" + personal.getCuit());
             pw.print("|" + personal.getCategoria());
-            pw.print("|" + personal.getSueldo());
+            pw.println("|" + personal.getSueldo());
             pw.close();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
