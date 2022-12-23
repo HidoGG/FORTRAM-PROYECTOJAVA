@@ -1,8 +1,6 @@
 # FORTRAM-PROYECTOJAVA
 # Ya se encuentra actualizado el proyecto 
  
-Pasos para Ejecutar  el proyecto
-
 ###########PASOS PARA EJECUTAR ###########
 
 Para el login 
