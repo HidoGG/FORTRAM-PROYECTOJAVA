@@ -1,7 +1,5 @@
 # FORTRAM-PROYECTOJAVA
-<br/> 
-FALTA DOCUMENTAR COMO USAR EL PROGRAMA????
- # Ya se encuentra actualizado el proyecto 
+# Ya se encuentra actualizado el proyecto 
  
 Pasos para Ejecutar  el proyecto
 
